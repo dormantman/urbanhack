@@ -1,0 +1,6 @@
+{
+  "name": "UrbanAlertsBot",
+  "version": "0.1.0",
+  "token": "670367333:AAEhQY2GiwaEc0d4s35fD0MadrE335O4lIA",
+  "proxy": "socks5h://georgykomarov:yandex@srv.komarov.ml:1088"
+}

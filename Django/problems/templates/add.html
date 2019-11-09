@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/index.css"/>
+{% endblock %}
+{% block title %}Сообщить о проблеме{% endblock %}
+
+{% block content %}
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Сообщить о проблеме</h4>
+                <form action="/problems/add/" method="post">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div id="map" class="pb-3" style="width: 100%; height: 500px"></div>
+                    <div class=" form-group row">
+                        <div class="col-md-8">
+                            <button type="submit" class="btn btn-success">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+<script src="/static/map.js"></script>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+
+{% block head %}
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/index.css"/>
+    <script src="/static/index.js" type="text/javascript"></script>
+{% endblock %}
+{% block content %}
+    <div class="card border-secondary mb-2">
+        <div class="card-header bg-transparent border-success text-success text-center">О проекте</div>
+        <div class="card-body">За частичное состояние урбанистики в России отвечает Министерство природных ресурсов и
+            экологии Российской Федерации.
+            Они должны обеспечивать экологическую безопасность и заставлять подрядчиков решать экологические проблемы.
+            Подрядчики плохо справляются со своей работой — и поэтому урбанистика в России далека от совершенства.
+            Мы создали UrbanAlerts именно для того, чтобы контролировать экологические службы и помогать вам добиваться
+            улучшений.
+            Приложение посвященное развитию городской системы оповещения.
+            Присоединяйтесь.
+        </div>
+    </div>
+{% endblock content %}
+{% block map %}
+    <div id="map" class="pb-1" style="width: 100%; height: 70%"></div>{% endblock %}
